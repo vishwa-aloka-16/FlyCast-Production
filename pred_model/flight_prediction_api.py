@@ -3,13 +3,14 @@ from flask_cors import CORS
 import pandas as pd
 import joblib
 import pickle
+import os
 
 app = Flask(__name__)
 CORS(app)
 
 # Load trained model and model columns
-model = joblib.load('flight_delay_model.pkl')
-model_columns = joblib.load('model_columns.pkl')
+model = joblib.load(os.path.join(os.path.dirname(__file__), "../flight_delay_model.pkl"))
+model_columns = joblib.load(os.path.join(os.path.dirname(__file__), "../model_columns.pkl"))
 
 # Load precomputed airport distances
 with open('airport_distances.pkl', 'rb') as f:
