@@ -5,7 +5,8 @@ import joblib
 import pickle
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder=os.path.join(os.path.dirname(__file__), '..', 'templates'))
+
 CORS(app)
 
 # Load trained model and model columns
