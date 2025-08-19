@@ -21,7 +21,7 @@
 - [Developer Notes](#developer-notes)
 - [Project Structure](#project-structure)
 - [How It Works](#how-it-works)
-- [Airport/Airline Codes](#airport-airline-codes)
+- [Airport/Airline Codes](#airportairline-codes)
 - [Contact](#contact)
 - [License](#license)
 
