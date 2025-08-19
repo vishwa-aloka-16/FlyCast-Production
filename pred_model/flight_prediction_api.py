@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify,render_template
 from flask_cors import CORS
 import pandas as pd
 import joblib
@@ -65,7 +65,7 @@ def predict():
 
 @app.route('/', methods=['GET'])
 def home():
-    return jsonify({'message': 'Flight Delay Prediction API is running.'})
+    return render_template("index.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
