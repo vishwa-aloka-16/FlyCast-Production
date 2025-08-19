@@ -21,6 +21,7 @@
 - [Developer Notes](#developer-notes)
 - [Project Structure](#project-structure)
 - [How It Works](#how-it-works)
+- [Airport/Airline Codes](#airport-airline-codes)
 - [Contact](#contact)
 - [License](#license)
 
@@ -148,6 +149,9 @@ pred_model/
 
 ***
 ### AIRPORT/AIRLINE CODES
+
+Codes : 
+
 ```js
 const airportData = [
 
