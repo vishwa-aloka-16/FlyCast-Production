@@ -64,9 +64,8 @@ def predict():
     except Exception as e:
         return jsonify({'error': str(e)}), 400
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def home():
-    return render_template("index.html")
-
+    return jsonify({'message': 'Flight Delay Prediction API is running.'})
 if __name__ == '__main__':
-    app.run(debug=True)
+     app.run(debug=True)
