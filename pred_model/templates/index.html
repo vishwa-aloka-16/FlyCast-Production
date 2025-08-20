@@ -1,976 +1,408 @@
-
 <!DOCTYPE html>
-<html lang="en"> 
-<head>
-    <title>FlyCast API - Flight Delay Prediction Documentation</title>
-    
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <meta name="description" content="FlyCast API Documentation - Flight Delay Prediction Service">
-    <meta name="author" content="Vishwa Aloka Bandara">    
-    <link rel="shortcut icon" href="favicon.ico"> 
-    
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
-
-<!-- FontAwesome JS -->
-<script defer src="{{ url_for('static', filename='assets/fontawesome/js/all.min.js') }}"></script>
-
-<!-- Plugins CSS -->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.2/styles/atom-one-dark.min.css">
-<link rel="stylesheet" href="{{ url_for('static', filename='assets/plugins/simplelightbox/simple-lightbox.min.css') }}">
-
-<!-- Theme CSS -->
-<link id="theme-style" rel="stylesheet" href="{{ url_for('static', filename='assets/css/theme.css') }}">
-
-
-</head> 
-
-<body class="docs-page">    
-    <header class="header fixed-top">	    
-        <div class="branding docs-branding">
-            <div class="container-fluid position-relative py-2">
-                <div class="docs-logo-wrapper">
-					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
-	                    <span></span>
-	                    <span></span>
-	                    <span></span>
-	                </button>
-	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon me-2" src="https://www.freeiconspng.com/thumbs/airplane-icon-png/plane-icon-png-images--pictures--becuo-8.png" width="48px" alt="logo">&nbsp;<span class="logo-text">FlyCast<span class="text-alt">&nbsp; API</span></span></a></div>    
-                </div><!--//docs-logo-wrapper-->
-	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
-	                <div class="top-search-box d-none d-lg-flex">
-		                <form class="search-form">
-				            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
-				            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
-				        </form>
-	                </div>
-	
-					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
-						<li class="list-inline-item"><a href="https://github.com/vishwa-aloka-16"><i class="fa-brands fa-github fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="https://x.com/VishwaAlokaX"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
-		            </ul><!--//social-list-->
-		            <a href="https://flycast-api.onrender.com" class="btn btn-primary d-none d-lg-flex">API Endpoint</a>
-	            </div><!--//docs-top-utilities-->
-            </div><!--//container-->
-        </div><!--//branding-->
-    </header><!--//header-->
-    
-    
-    <div class="docs-wrapper">
-	    <div id="docs-sidebar" class="docs-sidebar">
-		    <div class="top-search-box d-lg-none p-3">
-                <form class="search-form">
-		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
-		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
-		        </form>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Plus Example</title>
+    <link href="{{ url_for('static', filename='output.css') }}" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bg-white dark:bg-gray-900">
+      <header class="absolute inset-x-0 top-0 z-50">
+        <nav
+          aria-label="Global"
+          class="flex items-center justify-between p-6 lg:px-8"
+        >
+          <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img
+                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                alt=""
+                class="h-8 w-auto dark:hidden"
+              />
+              <img
+                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                alt=""
+                class="h-8 w-auto not-dark:hidden"
+              />
+            </a>
+          </div>
+          <div class="flex lg:hidden">
+            <button
+              type="button"
+              command="show-modal"
+              commandfor="mobile-menu"
+              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-200"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                data-slot="icon"
+                aria-hidden="true"
+                class="size-6"
+              >
+                <path
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="hidden lg:flex lg:gap-x-12">
+            <a
+              href="#"
+              class="text-sm/6 font-semibold text-gray-900 dark:text-white"
+              >API</a
+            >
+            <a
+              href="#"
+              class="text-sm/6 font-semibold text-gray-900 dark:text-white"
+              >Features</a
+            >
+            <a
+              href="#"
+              class="text-sm/6 font-semibold text-gray-900 dark:text-white"
+              >Documentation</a
+            >
+            <a
+              href="#"
+              class="text-sm/6 font-semibold text-gray-900 dark:text-white"
+              >Contact</a
+            >
+          </div>
+          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a
+              href="https://github.com/vishwa-aloka-16"
+              class="text-sm/6 font-semibold text-gray-900 dark:text-white"
+              >Git Hub <span aria-hidden="true">&rarr;</span></a
+            >
+          </div>
+        </nav>
+        <el-dialog>
+          <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+            <div tabindex="0" class="fixed inset-0 focus:outline-none">
+              <el-dialog-panel
+                class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:bg-gray-900 dark:sm:ring-gray-100/10"
+              >
+                <div class="flex items-center justify-between">
+                  <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">FlyCast API</span>
+                    <img
+                      src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
+                      alt=""
+                      class="h-8 w-auto dark:hidden"
+                    />
+                    <img
+                      src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                      alt=""
+                      class="h-8 w-auto not-dark:hidden"
+                    />
+                  </a>
+                  <button
+                    type="button"
+                    command="close"
+                    commandfor="mobile-menu"
+                    class="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-200"
+                  >
+                    <span class="sr-only">Close menu</span>
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      data-slot="icon"
+                      aria-hidden="true"
+                      class="size-6"
+                    >
+                      <path
+                        d="M6 18 18 6M6 6l12 12"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="mt-6 flow-root">
+                  <div
+                    class="-my-6 divide-y divide-gray-500/10 dark:divide-white/10"
+                  >
+                    <div class="space-y-2 py-6">
+                      <a
+                        href="#"
+                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
+                        >API</a
+                      >
+                      <a
+                        href="#"
+                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
+                        >Features</a
+                      >
+                      <a
+                        href="#"
+                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
+                        >Documentation</a
+                      >
+                      <a
+                        href="#"
+                        class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
+                        >Contact</a
+                      >
+                    </div>
+                    <div class="py-6">
+                      <a
+                        href="https://github.com/vishwa-aloka-16"
+                        class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-white/5"
+                        >Git Hub</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </el-dialog-panel>
             </div>
-		    <nav id="docs-nav" class="docs-nav navbar">
-			    <ul class="section-items list-unstyled nav flex-column pb-3">
-				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder me-2"><i class="fas fa-home"></i></span>Overview</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Features</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Quick Start</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder me-2"><i class="fas fa-cogs"></i></span>API Reference</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-1">POST /predict</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">Request Parameters</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">Response Format</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder me-2"><i class="fas fa-code"></i></span>Examples</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">cURL Example</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">JavaScript Example</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">Python Example</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder me-2"><i class="fas fa-plane"></i></span>Reference Data</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">Airport Codes</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Airline Names</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">All Codes</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-5"><span class="theme-icon-holder me-2"><i class="fas fa-info-circle"></i></span>Developer Notes</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-1">How It Works</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-2">Project Structure</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-5-3">Best Practices</a></li>
-				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-6"><span class="theme-icon-holder me-2"><i class="fas fa-question-circle"></i></span>Support</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-1">Contact</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-6-2">License</a></li>
-			    </ul>
+          </dialog>
+        </el-dialog>
+      </header>
+      
+      <div class="relative isolate px-6 pt-14 lg:px-8">
+        <div
+          aria-hidden="true"
+          class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        >
+          <div
+            style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            "
+            class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
+          ></div>
+        </div>
+        <div class="mx-auto max-w-2xl py-36 sm:py-48 lg:py-36">
+          <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+            <div
+              class="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 dark:text-gray-400 dark:ring-white/10 dark:hover:ring-white/20"
+            >
+              Flycast API Version V.01 is out Now!
+              <a
+                href="https://github.com/vishwa-aloka-16"
+                class="font-semibold text-indigo-600 dark:text-indigo-400"
+                ><span aria-hidden="true" class="absolute inset-0"></span>Read
+                more <span aria-hidden="true">&rarr;</span></a
+              >
+            </div>
+          </div>
+          <div class="text-center">
+            <h1
+              class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl dark:text-white"
+            >
+              Flight Delay Prediction With ML
+            </h1>
+            <p
+              class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8 dark:text-gray-400"
+            >
+              FlyCast is a RESTful web API that predicts the probability of a
+              flight delay based on airline, schedule, and route information.
+            </p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+              <a
+                href="#"
+                class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400 dark:focus-visible:outline-indigo-500"
+                >Documentation</a
+              >
+              <a
+                href="#"
+                class="text-sm/6 font-semibold text-gray-900 dark:text-white"
+                >Learn more <span aria-hidden="true">→</span></a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        >
+          <div
+            style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            "
+            class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"
+          ></div>
+        </div>
+      </div>
+    </div>
+<div class="overflow-hidden bg-white py-24 sm:py-32 dark:bg-gray-900">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      <div class="lg:pt-4 lg:pr-8">
+        <div class="lg:max-w-lg">
+          <h2 class="text-base/7 font-semibold text-indigo-600 dark:text-indigo-400">Fly smarter</h2>
+          <p class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl dark:text-white">
+            FlyCast: Smarter Flight Predictions
+          </p>
+          <p class="mt-6 text-lg/8 text-gray-700 dark:text-gray-300">
+            FlyCast brings predictive accuracy and real-time data to the aviation industry. 
+            From airlines to travelers, experience the most reliable flight insights at your fingertips.
+          </p>
+          <dl class="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none dark:text-gray-400">
+            
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-gray-900 dark:text-white">
+                <svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-600 dark:text-indigo-400">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-11.75a.75.75 0 00-1.5 0V10c0 .199.079.389.22.53l3 3a.75.75 0 101.06-1.06l-2.78-2.78V6.25z" clip-rule="evenodd"/>
+                </svg>
+                Plug-and-Play.
+              </dt>
+              <dd class="inline">Effortlessly integrate FlyCast into your workflow—no complex setup required. Start immediately and manage flight data seamlessly.</dd>
+            </div>
+            
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-gray-900 dark:text-white">
+                <svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-600 dark:text-indigo-400">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414l2 2c.39.39 1.024.39 1.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                High Accuracy.
+              </dt>
+              <dd class="inline">Advanced predictive algorithms ensure precise flight insights, so you always have reliable, up-to-date information.</dd>
+            </div>
+            
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-gray-900 dark:text-white">
+                <svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-600 dark:text-indigo-400">
+                  <path fill-rule="evenodd" d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2v2H5a2 2 0 00-2 2v2a2 2 0 002 2h2v2a2 2 0 002 2h2a2 2 0 002-2v-2h2a2 2 0 002-2v-2a2 2 0 00-2-2h-2V9h2a2 2 0 002-2V5a2 2 0 00-2-2H5z" clip-rule="evenodd"/>
+                </svg>
+                Fast Response.
+              </dt>
+              <dd class="inline">Lightning-fast performance delivers real-time flight data and predictions, keeping you ahead of schedule.</dd>
+            </div>
+            
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-gray-900 dark:text-white">
+                <svg viewBox="0 0 20 20" fill="currentColor" class="absolute top-1 left-1 size-5 text-indigo-600 dark:text-indigo-400">
+                  <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm1.5 3h9a.5.5 0 010 1h-9a.5.5 0 010-1zM5 9.5h10a.5.5 0 010 1H5a.5.5 0 010-1zm0 3.5h10a.5.5 0 010 1H5a.5.5 0 010-1z" clip-rule="evenodd"/>
+                </svg>
+                All US Flights.
+              </dt>
+              <dd class="inline">Covers every commercial flight across the United States—access complete, detailed flight information anytime, anywhere.</dd>
+            </div>
 
-		    </nav><!--//docs-nav-->
-	    </div><!--//docs-sidebar-->
-	    <div class="docs-content">
-		    <div class="container">
-			    <article class="docs-article" id="section-1">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">FlyCast API Overview</h1>
-					    <section class="docs-intro">
-						    <p><strong>FlyCast</strong> is a RESTful web API that predicts the probability of a flight delay based on airline, schedule, and route information. <br>
-						    <strong>API Host:</strong> <a href="https://flycast-api.onrender.com" class="theme-link" target="_blank">https://flycast-api.onrender.com</a></p>
-						</section><!--//docs-intro-->
-				    </header>
-				    <section class="docs-section" id="item-1-1">
-						<h2 class="section-heading">Features</h2>
-						<ul>
-						    <li>Predicts flight delay probability (0–1)</li>
-						    <li>Instant binary delay prediction based on an optimal threshold (default: 0.80)</li>
-						    <li>Plug-and-play endpoint, no authentication required</li>
-						    <li>Supports all US airlines/major US airports (expandable)</li>
-						</ul>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-1-2">
-						<h2 class="section-heading">Quick Start</h2>
-						<p>Get started with FlyCast API in seconds. Simply send a POST request to our prediction endpoint with flight details.</p>
-						
-						<div class="callout-block callout-block-info">
-                            <div class="content">
-                                <h4 class="callout-title">
-	                                <span class="callout-icon-holder me-1">
-		                                <i class="fas fa-info-circle"></i>
-		                            </span>
-	                                Base URL
-	                            </h4>
-                                <p>All API requests should be made to: <code>https://flycast-api.onrender.com</code></p>
-                            </div>
-                        </div>
-                        
-                        <h5>Basic Usage:</h5>
-						<div class="docs-code-block">
-							<pre class="shadow-lg rounded"><code class="bash hljs">curl -X POST https://flycast-api.onrender.com/predict \
-  -H "Content-Type: application/json" \
-  -d '{"AIRLINE": "Delta Air Lines Inc.", "DAY_OF_WEEK": 3, "DEP_HOUR": 10, "MONTH": 9, "dep": "LAX", "arr": "JFK"}'</code></pre>
-						</div>
-					</section><!--//section-->
-					
-			    </article>
-			    
-			    <article class="docs-article" id="section-2">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">API Reference</h1>
-					    <section class="docs-intro">
-						    <p>Complete reference for the FlyCast API endpoints and parameters.</p>
-						</section><!--//docs-intro-->
-				    </header>
-				     <section class="docs-section" id="item-2-1">
-						<h2 class="section-heading">POST /predict</h2>
-						<p><strong>Predict the probability of a flight delay given standard flight details.</strong></p>
-						<ul>
-						    <li><strong>URL:</strong> <code>https://flycast-api.onrender.com/predict</code></li>
-						    <li><strong>Method:</strong> POST</li>
-						    <li><strong>Content-Type:</strong> application/json</li>
-						</ul>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-2-2">
-						<h2 class="section-heading">Request Parameters</h2>
-						
-						<div class="table-responsive my-4">
-							<table class="table table-bordered">
-								<thead>
-									<tr>
-										<th>Parameter</th>
-										<th>Type</th>
-										<th>Required</th>
-										<th>Description</th>
-									</tr>
-								</thead>
-								<tbody>
-								    <tr>
-									    <td><code>AIRLINE</code></td>
-									    <td>string</td>
-									    <td>Yes</td>
-									    <td>Airline name or IATA code</td>
-									</tr>
-									<tr>
-									    <td><code>DAY_OF_WEEK</code></td>
-									    <td>int</td>
-									    <td>Yes</td>
-									    <td>Day of week (1=Monday, ..., 7=Sunday)</td>
-									</tr>
-									<tr>
-									    <td><code>DEP_HOUR</code></td>
-									    <td>int</td>
-									    <td>Yes</td>
-									    <td>Scheduled departure hour (0-23)</td>
-									</tr>
-									<tr>
-									    <td><code>MONTH</code></td>
-									    <td>int</td>
-									    <td>Yes</td>
-									    <td>Month number (1-12)</td>
-									</tr>
-									<tr>
-									    <td><code>DELAY_DUE_WEATHER</code></td>
-									    <td>int</td>
-									    <td>No</td>
-									    <td>1 if prior weather delay, else 0 (default: 0)</td>
-									</tr>
-									<tr>
-									    <td><code>DELAY_DUE_NAS</code></td>
-									    <td>int</td>
-									    <td>No</td>
-									    <td>1 if prior NAS (airspace) delay, else 0 (default: 0)</td>
-									</tr>
-									<tr>
-									    <td><code>DELAY_DUE_CARRIER</code></td>
-									    <td>int</td>
-									    <td>No</td>
-									    <td>1 if prior carrier delay, else 0 (default: 0)</td>
-									</tr>
-									<tr>
-									    <td><code>dep</code></td>
-									    <td>string</td>
-									    <td>Yes</td>
-									    <td>IATA code of departure airport (e.g., "LAX")</td>
-									</tr>
-									<tr>
-									    <td><code>arr</code></td>
-									    <td>string</td>
-									    <td>Yes</td>
-									    <td>IATA code of arrival airport (e.g., "JFK")</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-2-3">
-						<h2 class="section-heading">Response Format</h2>
-						
-						<h5>Success Response:</h5>
-						<div class="docs-code-block">
-							<pre class="shadow-lg rounded"><code class="json hljs">{
-  "delay_probability": 0.4483,
-  "prediction": 0
-}</code></pre>
-						</div>
-						
-						<ul>
-						    <li><code>delay_probability</code>: Probability (0–1) that the flight will be delayed</li>
-						    <li><code>prediction</code>: 1 = Delayed (if probability >= 0.8), 0 = On time</li>
-						</ul>
-						
-						<h5>Error Response:</h5>
-						<div class="docs-code-block">
-							<pre class="shadow-lg rounded"><code class="json hljs">{
-  "error": "Missing field: AIRLINE"
-}</code></pre>
-						</div>
-					</section><!--//section-->
-			    </article><!--//docs-article-->
-			    
-			    
-			    <article class="docs-article" id="section-3">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">Code Examples</h1>
-					    <section class="docs-intro">
-						    <p>Ready-to-use code examples for integrating FlyCast API into your applications.</p>
-						</section><!--//docs-intro-->
-				    </header>
-				     <section class="docs-section" id="item-3-1">
-						<h2 class="section-heading">cURL Example</h2>
-						<div class="docs-code-block">
-							<pre class="shadow-lg rounded"><code class="bash hljs">
+          </dl>
+        </div>
+      </div>
+      
+      <!-- Dark Mode Image -->
+      <img width="2432" height="1442" src="https://www.airport-technology.com/wp-content/uploads/sites/14/2020/06/Image_1-Kempegowda_International_Airport1.jpg" 
+           alt="FlyCast dark mode screenshot" 
+           class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 not-dark:hidden sm:w-228 md:-ml-4 lg:-ml-0 dark:ring-white/10" />
 
-curl -X POST https://flycast-api.onrender.com/predict \
-  -H "Content-Type: application/json" \
-  -d '{
-    "AIRLINE": "Frontier Airlines Inc.",
-    "DAY_OF_WEEK": 3,
-    "DEP_HOUR": 10,
-    "MONTH": 9,
-    "DELAY_DUE_WEATHER": 0,
-    "DELAY_DUE_NAS": 0,
-    "DELAY_DUE_CARRIER": 0,
-    "dep": "LAX",
-    "arr": "JFK"
-  }'
+      <!-- Light Mode Image -->
+      <img width="2432" height="1442" src="https://www.airport-technology.com/wp-content/uploads/sites/14/2020/06/Image_1-Kempegowda_International_Airport1.jpg" 
+           alt="FlyCast light mode screenshot" 
+           class="w-3xl max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-228 md:-ml-4 lg:-ml-0 dark:hidden dark:ring-white/10" />
+    </div>
+  </div>
+</div>
 
-</code></pre>
-						</div>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-3-2">
-						<h2 class="section-heading">JavaScript Example</h2>
-						<div class="docs-code-block">
-							<pre class="shadow-lg rounded"><code class="javascript hljs">
-								
-const flightData = {
-  AIRLINE: "Delta Air Lines Inc.",
-  DAY_OF_WEEK: 3,
-  DEP_HOUR: 14,
-  MONTH: 9,
-  DELAY_DUE_WEATHER: 0,
-  DELAY_DUE_NAS: 0,
-  DELAY_DUE_CARRIER: 0,
-  dep: "LAX",
-  arr: "JFK"
-};
+      <div class="bg-white py-24 sm:py-32 dark:bg-gray-900">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-3xl lg:text-center">
+            <p
+              class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl lg:text-balance dark:text-white"
+            >
+              A RESTful API for Flight Delay Prediction
+            </p>
+            <p class="mt-6 text-lg/8 text-gray-700 dark:text-gray-300 mb-16">
+              Features are preprocessed, encoded, and validated via cross-validation, achieving ~90% accuracy, enabling precise, real-time predictions for all U.S. flights with robust reliability and performance.            </p>
+          </div>
+          <dl
+            class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3"
+          >
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+              <dt class="text-base/7 text-gray-600 dark:text-gray-400">
+                recodes of data used in training
+              </dt>
+              <dd
+                class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl dark:text-white"
+              >
+                3,000 K +
+              </dd>
+            </div>
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+              <dt class="text-base/7 text-gray-600 dark:text-gray-400">
+                US airports are covered
+              </dt>
+              <dd
+                class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl dark:text-white"
+              >
+                600+
+              </dd>
+            </div>
+            <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+              <dt class="text-base/7 text-gray-600 dark:text-gray-400">
+                Accuracy rate of the model
+              </dt>
+              <dd
+                class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl dark:text-white"
+              >
+                ~93%
+              </dd>
+            </div>
+          </dl>
+        </div>
+        <div class="mt-16 flex items-center justify-center gap-x-6">
+              <a
+                href="#"
+                class="text-sm/6 font-semibold text-gray-900 dark:text-white"
+                >Documentation <span aria-hidden="true">→</span></a
+              >
+            </div>
+      </div>
 
-fetch('https://flycast-api.onrender.com/predict', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(flightData)
-})
-.then(response => response.json())
-.then(data => {
-  console.log('Delay probability:', data.delay_probability);
-  console.log('Prediction:', data.prediction ? 'Delayed' : 'On Time');
-})
-.catch(error => console.error('Error:', error));
-
-</code></pre>
-						</div>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-3-3">
-						<h2 class="section-heading">Python Example</h2>
-						<div class="docs-code-block">
-							<pre class="shadow-lg rounded"><code class="python hljs">import requests
-import json
-
-# Flight data
-flight_data = {
-    "AIRLINE": "American Airlines Inc.",
-    "DAY_OF_WEEK": 5,
-    "DEP_HOUR": 8,
-    "MONTH": 12,
-    "DELAY_DUE_WEATHER": 0,
-    "DELAY_DUE_NAS": 0,
-    "DELAY_DUE_CARRIER": 0,
-    "dep": "DFW",
-    "arr": "LAX"
-}
-
-# Make API request
-response = requests.post(
-    'https://flycast-api.onrender.com/predict',
-    headers={'Content-Type': 'application/json'},
-    data=json.dumps(flight_data)
-)
-
-if response.status_code == 200:
-    result = response.json()
-    print(f"Delay probability: {result['delay_probability']:.4f}")
-    print(f"Prediction: {'Delayed' if result['prediction'] else 'On Time'}")
-else:
-    print(f"Error: {response.json()}")
-</code></pre>
-						</div>
-					</section><!--//section-->
-			    </article><!--//docs-article-->
-			    
-			    <article class="docs-article" id="section-4">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">Reference Data</h1>
-					    <section class="docs-intro">
-						    <p>Complete lists of supported airport codes and airline names for the FlyCast API.</p>
-						</section><!--//docs-intro-->
-				    </header>
-				     <section class="docs-section" id="item-4-1">
-						<h2 class="section-heading">Airport Codes</h2>
-						<p>Use these IATA airport codes for the <code>dep</code> and <code>arr</code> parameters:</p>
-						
-						<div class="callout-block callout-block-info">
-                            <div class="content">
-                                <h4 class="callout-title">
-	                                <span class="callout-icon-holder me-1">
-		                                <i class="fas fa-info-circle"></i>
-		                            </span>
-	                                Note
-	                            </h4>
-                                <p>Send only IATA codes (e.g., <code>"JFK"</code>, <code>"LAX"</code>) for departure and arrival airports.</p>
-                            </div>
-                        </div>
-						
-						<div class="table-responsive my-4">
-							<table class="table table-striped">
-								<thead>
-									<tr>
-										<th>Code</th>
-										<th>Airport Name</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr><td>ATL</td><td>Hartsfield–Jackson Atlanta International Airport (Atlanta, GA)</td></tr>
-									<tr><td>LAX</td><td>Los Angeles International Airport (Los Angeles, CA)</td></tr>
-									<tr><td>ORD</td><td>O'Hare International Airport (Chicago, IL)</td></tr>
-									<tr><td>DFW</td><td>Dallas/Fort Worth International Airport (Dallas–Fort Worth, TX)</td></tr>
-									<tr><td>...</td><td>more...</td></tr>
-							</table>
-						</div>
-						
-						<div class="callout-block callout-block-success">
-                            <div class="content">
-                                <h4 class="callout-title">
-	                                <span class="callout-icon-holder me-1">
-		                                <i class="fas fa-info-circle"></i>
-		                            </span>
-	                                Complete List
-	                            </h4>
-                                <p>The API supports over 300 US airports. This table shows the most popular ones. The complete list includes all major US commercial airports.</p>
-                            </div>
-                        </div>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-4-2">
-						<h2 class="section-heading">Airline Names</h2>
-						<p>Use these exact airline names for the <code>AIRLINE</code> parameter:</p>
-						
-						<div class="table-responsive my-4">
-							<table class="table table-striped">
-								<thead>
-									<tr>
-										<th>Airline Name</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr><td>United Air Lines Inc.</td></tr>
-									<tr><td>Delta Air Lines Inc.</td></tr>
-									<tr><td>American Airlines Inc.</td></tr>
-									<tr><td>Southwest Airlines Co.</td></tr>
-									<tr><td>More..</td></tr>
-								</tbody>
-							</table>
-						</div>
-					</section><!--//section-->
-					<section class="docs-section" id="item-4-3">
-						<h2 class="section-heading">Airline/Airport Codes</h2>
-						<p>Values used for the <code>AIRLINE</code>and <code>AIRPLANE</code> parameter:</p>
-						
-						
-						<div class="docs-code-block">
-<pre class="shadow-lg rounded"><code class="javascript hljs">
-								
-const airportData = [
-
- { code: "FLL", name: " Fort Lauderdale–Hollywood International Airport (Fort Lauderdale, FL)" },
- { code: "MSP", name: " Minneapolis–Saint Paul International Airport (Minneapolis–Saint Paul, MN)" },
- { code: "DEN", name: " Denver International Airport (Denver, CO)" },
- { code: "MCO", name: " Orlando International Airport (Orlando, FL)" },
- { code: "DAL", name: " Dallas Love Field (Dallas, TX)" },
- { code: "DCA", name: " Ronald Reagan Washington National Airport (Washington, DC)" },
- { code: "HSV", name: " Huntsville International Airport – Carl T. Jones Field (Huntsville, AL)" },
- { code: "IAH", name: " George Bush Intercontinental Airport (Houston, TX)" },
- { code: "SEA", name: " Seattle–Tacoma International Airport (Seattle, WA)" },
- { code: "ATL", name: " Hartsfield–Jackson Atlanta International Airport (Atlanta, GA)" },
- { code: "RDU", name: " Raleigh–Durham International Airport (Raleigh/Durham, NC)" },
- { code: "MDW", name: " Chicago Midway International Airport (Chicago, IL)" },
- { code: "BDL", name: " Bradley International Airport (Hartford–Springfield region, CT)" },
- { code: "SJC", name: " Norman Y. Mineta San José International Airport (San Jose, CA)" },
- { code: "BWI", name: " Baltimore/Washington International Thurgood Marshall Airport (Baltimore, MD)" },
- { code: "STT", name: " Cyril E. King Airport (St. Thomas, U.S. Virgin Islands)" },
- { code: "SRQ", name: " Sarasota–Bradenton International Airport (Sarasota, FL)" },
- { code: "JFK", name: " John F. Kennedy International Airport (New York, NY)" },
- { code: "GRR", name: " Gerald R. Ford International Airport (Grand Rapids, MI)" },
- { code: "DFW", name: " Dallas/Fort Worth International Airport (Dallas–Fort Worth, TX)" },
- { code: "CLT", name: " Charlotte Douglas International Airport (Charlotte, NC)" },
- { code: "ORD", name: " O'Hare International Airport (Chicago, IL)" },
- { code: "LAS", name: " Las Vegas McCarran/Louis Reid International Airport (Las Vegas, NV)" },
- { code: "TUL", name: " Tulsa International Airport (Tulsa, OK)" },
- { code: "USA", name: " (No IATA code; possibly a placeholder or country code—not applicable)" },
- { code: "SLC", name: " Salt Lake City International Airport (Salt Lake City, UT)" },
- { code: "BNA", name: " Nashville International Airport (Nashville, TN)" },
- { code: "AUS", name: " Austin–Bergstrom International Airport (Austin, TX)" },
- { code: "IND", name: " Indianapolis International Airport (Indianapolis, IN)" },
- { code: "MHT", name: " Manchester–Boston Regional Airport (Manchester, NH)" },
- { code: "SFO", name: " San Francisco International Airport (San Francisco, CA)" },
- { code: "PRC", name: " Ernest A. Love Field (Prescott, AZ)" },
- { code: "BOS", name: " Logan International Airport (Boston, MA)" },
- { code: "LAX", name: " Los Angeles International Airport (Los Angeles, CA)" },
- { code: "SMF", name: " Sacramento International Airport (Sacramento, CA)" },
- { code: "DTW", name: " Detroit Metropolitan Wayne County Airport (Detroit, MI)" },
- { code: "SAT", name: " San Antonio International Airport (San Antonio, TX)" },
- { code: "MSY", name: " Louis Armstrong New Orleans International Airport (New Orleans, LA)" },
- { code: "CMH", name: " John Glenn Columbus International Airport (Columbus, OH)" },
- { code: "STL", name: " Lambert–St. Louis International Airport (St. Louis, MO)" },
- { code: "SJU", name: " Luis Muñoz Marín International Airport (San Juan, Puerto Rico)" },
- { code: "PHX", name: " Phoenix Sky Harbor International Airport (Phoenix, AZ)" },
- { code: "TPA", name: " Tampa International Airport (Tampa, FL)" },
- { code: "LGA", name: " LaGuardia Airport (New York, NY)" },
- { code: "PHL", name: " Philadelphia International Airport (Philadelphia, PA)" },
- { code: "GRK", name: " Robert Gray Army Airfield (Fort Hood – Killeen/Temple, TX)" },
- { code: "ILM", name: " Wilmington International Airport (Wilmington, NC)" },
- { code: "JLN", name: " Joplin Regional Airport (Joplin, MO)" },
- { code: "MKE", name: " Milwaukee Mitchell International Airport (Milwaukee, WI)" },
- { code: "BIL", name: " Billings Logan International Airport (Billings, MT)" },
- { code: "BLI", name: " Bellingham International Airport (Bellingham, WA)" },
- { code: "CHS", name: " Charleston International Airport (Charleston, SC)" },
- { code: "RIC", name: " Richmond International Airport (Richmond, VA)" },
- { code: "GSO", name: " Piedmont Triad International Airport (Greensboro/Winston-Salem/High Point, NC)" },
- { code: "MCI", name: " Kansas City International Airport (Kansas City, MO)" },
- { code: "EWR", name: " Newark Liberty International Airport (Newark, NJ)" },
- { code: "ELP", name: " El Paso International Airport (El Paso, TX)" },
- { code: "SDF", name: " Louisville Muhammad Ali International Airport (Louisville, KY)" },
- { code: "HPN", name: " Westchester County Airport (White Plains, NY)" },
- { code: "SAN", name: " San Diego International Airport (San Diego, CA)" },
- { code: "BHM", name: " Birmingham–Shuttlesworth International Airport (Birmingham, AL)" },
- { code: "ASE", name: " Aspen/Pitkin County Airport (Aspen, CO)" },
- { code: "HNL", name: " Daniel K. Inouye International Airport (Honolulu, HI)" },
- { code: "MAF", name: " Midland International Air & Space Port (Midland/Odessa, TX)" },
- { code: "BUF", name: " Buffalo Niagara International Airport (Buffalo, NY)" },
- { code: "TUS", name: " Tucson International Airport (Tucson, AZ)" },
- { code: "SYR", name: " Syracuse Hancock International Airport (Syracuse, NY)" },
- { code: "MSN", name: " Dane County Regional Airport (Madison, WI)" },
- { code: "FAT", name: " Fresno Yosemite International Airport (Fresno, CA)" },
- { code: "FWA", name: " Fort Wayne International Airport (Fort Wayne, IN)" },
- { code: "LAN", name: " Capital Region International Airport (Lansing, MI)" },
- { code: "ABI", name: " Abilene Regional Airport (Abilene, TX)" },
- { code: "ICT", name: " Wichita Dwight D. Eisenhower National Airport (Wichita, KS)" },
- { code: "CMI", name: " University of Illinois Willard Airport (Champaign/Urbana, IL)" },
- { code: "IAD", name: " Washington Dulles International Airport (Dulles, VA)" },
- { code: "OAK", name: " Metropolitan Oakland International Airport (Oakland, CA)" },
- { code: "EUG", name: " Eugene Airport (Eugene, OR)" },
- { code: "MIA", name: " Miami International Airport (Miami, FL)" },
- { code: "CHA", name: " Chattanooga Metropolitan Airport (Chattanooga, TN)" },
- { code: "BTV", name: " Burlington International Airport (Burlington, VT)" },
- { code: "RSW", name: " Southwest Florida International Airport (Fort Myers, FL)" },
- { code: "PDX", name: " Portland International Airport (Portland, OR)" },
- { code: "SNA", name: " John Wayne Airport (Santa Ana/Orange County, CA)" },
- { code: "PIT", name: " Pittsburgh International Airport (Pittsburgh, PA)" },
- { code: "OGG", name: " Kahului Airport (Maui, HI)" },
- { code: "HRL", name: " Valley International Airport (Harlingen, TX)" },
- { code: "BIS", name: " Bismarck Municipal Airport (Bismarck, ND)" },
- { code: "SHR", name: " Sheridan County Airport (Sheridan, WY)" },
- { code: "BOI", name: " Boise Airport (Boise, ID)" },
- { code: "RNO", name: " Reno–Tahoe International Airport (Reno, NV)" },
- { code: "SBP", name: " San Luis County Regional Airport (San Luis Obispo, CA)" },
- { code: "GSP", name: " Greenville–Spartanburg International Airport (Greenville/Spartanburg, SC)" },
- { code: "MLB", name: " Melbourne Orlando International Airport (Melbourne, FL)" },
- { code: "GRB", name: " Austin Straubel International Airport (Green Bay, WI)" },
- { code: "CRW", name: " Yeager Airport (Charleston, WV)" },
- { code: "LGB", name: " Long Beach Airport (Long Beach, CA)" },
- { code: "OKC", name: " Will Rogers World Airport (Oklahoma City, OK)" },
- { code: "PVD", name: " T.F. Green International Airport (Providence, RI)" },
- { code: "YAK", name: " Yakutat Airport (Yakutat, AK)" },
- { code: "CID", name: " The Eastern Iowa Airport (Cedar Rapids, IA)" },
- { code: "FSD", name: " Sioux Falls Regional Airport (Sioux Falls, SD)" },
- { code: "HYS", name: " Hays Regional Airport (Hays, KS)" },
- { code: "VPS", name: " Destin–Fort Walton Beach Airport (Valparaiso, FL)" },
- { code: "ROC", name: " Greater Rochester International Airport (Rochester, NY)" },
- { code: "SAV", name: " Savannah/Hilton Head International Airport (Savannah, GA)" },
- { code: "CLE", name: " Cleveland Hopkins International Airport (Cleveland, OH)" },
- { code: "RDD", name: " Redding Municipal Airport (Redding, CA)" },
- { code: "ANC", name: " Ted Stevens Anchorage International Airport (Anchorage, AK)" },
- { code: "DVL", name: " Devils Lake Regional Airport (Devils Lake, ND)" },
- { code: "SWO", name: " Stillwater Regional Airport (Stillwater, OK)" },
- { code: "BUR", name: " Hollywood Burbank Airport (Burbank, CA)" },
- { code: "PIR", name: " Pierre Regional Airport (Pierre, SD)" },
- { code: "HOU", name: " William P. Hobby Airport (Houston, TX)" },
- { code: "PBI", name: " Palm Beach International Airport (West Palm Beach, FL)" },
- { code: "MLI", name: " Quad City International Airport (Moline/Davenport, IL)" },
- { code: "AZA", name: " Phoenix–Mesa Gateway Airport (Phoenix, AZ)" },
- { code: "MKG", name: " Muskegon County Airport (Muskegon, MI)" },
- { code: "PNS", name: " Pensacola International Airport (Pensacola, FL)" },
- { code: "MYR", name: " Myrtle Beach International Airport (Myrtle Beach, SC)" },
- { code: "GTF", name: " Great Falls International Airport (Great Falls, MT)" },
- { code: "LSE", name: " La Crosse Regional Airport (La Crosse, WI)" },
- { code: "RDM", name: " Roberts Field (Redmond/Bend, OR)" },
- { code: "ORF", name: " Norfolk International Airport (Norfolk, VA)" },
- { code: "KOA", name: " Ellison Onizuka Kona International Airport (Kona, HI)" },
- { code: "MQT", name: " Sawyer International Airport (Marquette, MI)" },
- { code: "COS", name: " Colorado Springs Airport (Colorado Springs, CO)" },
- { code: "CVG", name: " Cincinnati/Northern Kentucky International Airport (Cincinnati area, KY/OH)" },
- { code: "MOB", name: " Mobile Regional Airport (Mobile, AL)" },
- { code: "AVL", name: " Asheville Regional Airport (Asheville, NC)" },
- { code: "BTR", name: " Baton Rouge Metropolitan Airport (Baton Rouge, LA)" },
- { code: "JNU", name: " Juneau International Airport (Juneau, AK)" },
- { code: "CDC", name: " Cedar City Regional Airport (Cedar City, UT)" },
- { code: "SPS", name: " Wichita Falls Municipal Airport (Sheppard AFB/Wichita Falls, TX)" },
- { code: "ECP", name: " Northwest Florida Beaches International Airport (Panama City, FL)" },
- { code: "JAX", name: " Jacksonville International Airport (Jacksonville, FL)" },
- { code: "SBN", name: " South Bend International Airport (South Bend, IN)" },
- { code: "SBA", name: " Santa Barbara Municipal Airport (Santa Barbara, CA)" },
- { code: "RAP", name: " Rapid City Regional Airport (Rapid City, SD)" },
- { code: "AMA", name: " Rick Husband Amarillo International Airport (Amarillo, TX)" },
- { code: "JMS", name: " Jamestown Regional Airport (Jamestown, ND)" },
- { code: "SFB", name: " Orlando Sanford International Airport (Sanford, FL)" },
- { code: "ABQ", name: " Albuquerque International Sunport (Albuquerque, NM)" },
- { code: "ALB", name: " Albany International Airport (Albany, NY)" },
- { code: "BGM", name: " Greater Binghamton Airport (Binghamton, NY)" },
- { code: "MGM", name: " Montgomery Regional Airport (Montgomery, AL)" },
- { code: "MEM", name: " Memphis International Airport (Memphis, TN)" },
- { code: "ONT", name: " Ontario International Airport (Ontario, CA)" },
- { code: "TVC", name: " Cherry Capital Airport (Traverse City, MI)" },
- { code: "GEG", name: " Spokane International Airport (Spokane, WA)" },
- { code: "OMA", name: " Eppley Airfield (Omaha, NE)" },
- { code: "ISP", name: " Long Island MacArthur Airport (Islip, NY)" },
- { code: "DLH", name: " Duluth International Airport (Duluth, MN)" },
- { code: "PIE", name: " St. Pete–Clearwater International Airport (St. Petersburg/Clearwater, FL)" },
- { code: "PSP", name: " Palm Springs International Airport (Palm Springs, CA)" },
- { code: "ACY", name: " Atlantic City International Airport (Pomona, NJ)" },
- { code: "BJI", name: " Bemidji Regional Airport (Bemidji, MN)" },
- { code: "LBB", name: " Lubbock Preston Smith International Airport (Lubbock, TX)" },
- { code: "SHV", name: " Shreveport Regional Airport (Shreveport, LA)" },
- { code: "TTN", name: " Trenton–Mercer Airport (Trenton, NJ)" },
- { code: "PIA", name: " Greater Peoria Regional Airport (Peoria, IL)" },
- { code: "GNV", name: " Gainesville Regional Airport (Gainesville, FL)" },
- { code: "PWM", name: " Portland International Jetport (Portland, ME)" },
- { code: "BZN", name: " Bozeman Yellowstone International Airport (Bozeman, MT)" },
- { code: "BRW", name: " Wiley Post–Will Rogers Memorial Airport (Utqiaġvik/Barrow, AK)" },
- { code: "MFR", name: " Rogue Valley International–Medford Airport (Medford, OR)" },
- { code: "GPT", name: " Gulfport–Biloxi International Airport (Gulfport/Biloxi, MS)" },
- { code: "ATW", name: " Appleton International Airport (Appleton, WI)" },
- { code: "DSM", name: " Des Moines International Airport (Des Moines, IA)" },
- { code: "CKB", name: " North Central West Virginia Airport (Clarksburg, WV)" },
- { code: "SGU", name: " St. George Regional Airport (St. George, UT)" },
- { code: "OTZ", name: " Ralph Wien Memorial Airport (Kotzebue, AK)" },
- { code: "BGR", name: " Bangor International Airport (Bangor, ME)" },
- { code: "XNA", name: " Northwest Arkansas National Airport (Fayetteville/Springdale, AR)" },
- { code: "CAE", name: " Columbia Metropolitan Airport (Columbia, SC)" },
- { code: "SGF", name: " Springfield–Branson National Airport (Springfield, MO)" },
- { code: "PGD", name: " Punta Gorda Airport (Punta Gorda, FL)" },
- { code: "VLD", name: " Valdosta Regional Airport (Valdosta, GA)" },
- { code: "CPR", name: " Casper/Natrona County International Airport (Casper, WY)" },
- { code: "LIH", name: " Lihue Airport (Lihue, HI)" },
- { code: "JAN", name: " Jackson–Evers International Airport (Jackson, MS)" },
- { code: "ACT", name: " Waco Regional Airport (Waco, TX)" },
- { code: "OAJ", name: " Albert J. Ellis Airport (Jacksonville, NC)" },
- { code: "ABE", name: " Lehigh Valley International Airport (Allentown, PA)" },
- { code: "EGE", name: " Eagle County Regional Airport (Eagle, CO)" },
- { code: "CRP", name: " Corpus Christi International Airport (Corpus Christi, TX)" },
- { code: "FNT", name: " Bishop International Airport (Flint, MI)" },
- { code: "WRG", name: " Wrangell Airport (Wrangell, AK)" },
- { code: "FCA", name: " Glacier Park International Airport (Kalispell, MT)" },
- { code: "CHO", name: " Charlottesville Albemarle Airport (Charlottesville, VA)" },
- { code: "MRY", name: " Monterey Regional Airport (Monterey, CA)" },
- { code: "SCE", name: " University Park Airport (State College, PA)" },
- { code: "AEX", name: " Alexandria International Airport (Alexandria, LA)" },
- { code: "MCW", name: " Mason City Municipal Airport (Mason City, IA)" },
- { code: "RST", name: " Rochester International Airport (Rochester, MN)" },
- { code: "SIT", name: " Sitka Rocky Gutierrez Airport (Sitka, AK)" },
- { code: "BMI", name: " Central Illinois Regional Airport (Bloomington, IL)" },
- { code: "ACV", name: " Arcata/Eureka Airport (Arcata, CA)" },
- { code: "GCC", name: " Gillette–Campbell County Airport (Gillette, WY)" },
- { code: "LFT", name: " Lafayette Regional Airport (Lafayette, LA)" },
- { code: "ITO", name: " Hilo International Airport (Hilo, HI)" },
- { code: "ABY", name: " Southwest Georgia Regional Airport (Albany, GA)" },
- { code: "GRI", name: " Central Nebraska Regional Airport (Grand Island, NE)" },
- { code: "BPT", name: " Jack Brooks Regional Airport (Beaumont/Port Arthur, TX)" },
- { code: "APN", name: " Alpena County Regional Airport (Alpena, MI)" },
- { code: "TLH", name: " Tallahassee International Airport (Tallahassee, FL)" },
- { code: "FSM", name: " Fort Smith Regional Airport (Fort Smith, AR)" },
- { code: "ALO", name: " Waterloo Regional Airport (Waterloo, IA)" },
- { code: "FAY", name: " Fayetteville Regional Airport (Fayetteville, NC)" },
- { code: "GJT", name: " Grand Junction Regional Airport (Grand Junction, CO)" },
- { code: "IAG", name: " Niagara Falls International Airport (Niagara Falls, NY)" },
- { code: "FLG", name: " Flagstaff Pulliam Airport (Flagstaff, AZ)" },
- { code: "LBE", name: " Arnold Palmer Regional Airport (Latrobe/Greensburg, PA)" },
- { code: "CAK", name: " Akron–Canton Airport (Akron/Canton, OH)" },
- { code: "BFL", name: " Meadows Field Airport (Bakersfield, CA)" },
- { code: "VEL", name: " Vernal Regional Airport (Vernal, UT)" },
- { code: "LIT", name: " Bill and Hillary Clinton National Airport (Little Rock, AR)" },
- { code: "STX", name: " Henry E. Rohlsen Airport (St. Croix, U.S. Virgin Islands)" },
- { code: "TYS", name: " McGhee Tyson Airport (Knoxville, TN)" },
- { code: "EYW", name: " Key West International Airport (Key West, FL)" },
- { code: "AVP", name: " Wilkes-Barre/Scranton International Airport (Scranton/Wilkes-Barre, PA)" },
- { code: "KTN", name: " Ketchikan International Airport (Ketchikan, AK)" },
- { code: "EVV", name: " Evansville Regional Airport (Evansville, IN)" },
- { code: "BRO", name: " Brownsville South Padre Island International Airport (Brownsville, TX)" },
- { code: "SWF", name: " Stewart International Airport (Newburgh, NY)" },
- { code: "GGG", name: " East Texas Regional Airport (Longview/Kilgore, TX)" },
- { code: "MSO", name: " Missoula International Airport (Missoula, MT)" },
- { code: "PSC", name: " Tri-Cities Airport (Pasco/Kennewick/Richland, WA)" },
- { code: "SLN", name: " Salina Regional Airport (Salina, KS)" },
- { code: "BIH", name: " Bishop International Airport (Flint, MI)" },
- { code: "MLU", name: " Monroe Regional Airport (Monroe, LA)" },
- { code: "HOB", name: " Lea County Regional Airport (Hobbs, NM)" },
- { code: "DAY", name: " James M. Cox Dayton International Airport (Dayton, OH)" },
- { code: "DBQ", name: " Dubuque Regional Airport (Dubuque, IA)" },
- { code: "ROW", name: " Roswell International Air Center (Roswell, NM)" },
- { code: "LEX", name: " Blue Grass Airport (Lexington, KY)" },
- { code: "PIH", name: " Pocatello Regional Airport (Pocatello, ID)" },
- { code: "EWN", name: " Coastal Carolina Regional Airport (New Bern, NC)" },
- { code: "ESC", name: " Delta County Airport (Escanaba, MI)" },
- { code: "SUX", name: " Sioux Gateway Airport (Sioux City, IA)" },
- { code: "PAE", name: " Snohomish County Airport (Paine Field, Everett, WA)" },
- { code: "CNY", name: " Moab Regional Airport (Moab, UT)" },
- { code: "CDV", name: " Kodiak Airport (Kodiak, AK)" },
- { code: "COU", name: " Columbia Regional Airport (Columbia, MO)" },
- { code: "LBF", name: " North Platte Regional Airport (North Platte, NE)" },
- { code: "MFE", name: " McAllen Miller International Airport (McAllen, TX)" },
- { code: "PBG", name: " Plattsburgh International Airport (Plattsburgh, NY)" },
- { code: "PSE", name: " Merced Regional Airport (Merced, CA)" },
- { code: "LAR", name: " Laramie Regional Airport (Laramie, WY)" },
- { code: "FAI", name: " Fairbanks International Airport (Fairbanks, AK)" },
- { code: "SCC", name: " Deadhorse Airport (Deadhorse, AK)" },
- { code: "MTJ", name: " Montrose Regional Airport (Montrose, CO)" },
- { code: "SJT", name: " San Angelo Regional Airport (San Angelo, TX)" },
- { code: "AGS", name: " Augusta Regional Airport (Bush Field)" },
- { code: "MDT", name: " Harrisburg International Airport (Harrisburg, PA)" },
- { code: "ELM", name: " Elmira/Corning Regional Airport (Elmira, NY)" },
- { code: "HDN", name: " Yampa Valley Airport (Hayden, CO)" },
- { code: "CWA", name: " Central Wisconsin Airport (Mosinee, WI)" },
- { code: "MOT", name: " Minot International Airport (Minot, ND)" },
- { code: "IDA", name: " Idaho Falls Regional Airport (Idaho Falls, ID)" },
- { code: "FAR", name: " Hector International Airport (Fargo, ND)" },
- { code: "GFK", name: " Grand Forks International Airport (Grand Forks, ND)" },
- { code: "JAC", name: " Jackson Hole Airport (Jackson, WY)" },
- { code: "LAW", name: " Lawton–Fort Sill Regional Airport (Lawton, OK)" },
- { code: "SUN", name: " Friedman Memorial Airport (Hailey/Ketchum, ID)" },
- { code: "IMT", name: " Ford Airport (Iron Mountain, MI)" },
- { code: "LCH", name: " Lake Charles Regional Airport (Lake Charles, LA)" },
- { code: "CLL", name: " Easterwood Airport (College Station, TX)" },
- { code: "PHF", name: " Newport News/Williamsburg International Airport (Newport News, VA)" },
- { code: "TRI", name: " Tri-Cities Regional Airport (Blountville/Johnson City, TN)" },
- { code: "BET", name: " Bethel Airport (Bethel, AK)" },
- { code: "BQN", name: " Rafael Hernández International Airport (Aguadilla, Puerto Rico)" },
- { code: "BRD", name: " Brainerd Lakes Regional Airport (Brainerd, MN)" },
- { code: "DAB", name: " Daytona Beach International Airport (Daytona Beach, FL)" },
- { code: "DRO", name: " Durango–La Plata County Airport (Durango, CO)" },
- { code: "STS", name: " Charles M. Schulz–Sonoma County Airport (Santa Rosa, CA)" },
- { code: "ROA", name: " Roanoke–Blacksburg Regional Airport (Roanoke, VA)" },
- { code: "DDC", name: " Dodge City Regional Airport (Dodge City, KS)" },
- { code: "INL", name: " Falls International Airport (International Falls, MN)" },
- { code: "ORH", name: " Worcester Regional Airport (Worcester, MA)" },
- { code: "TXK", name: " Texarkana Regional Airport (Texarkana, AR/TX)" },
- { code: "BFF", name: " Western Nebraska Regional Airport (Scottsbluff, NE)" },
- { code: "DHN", name: " Dothan Regional Airport (Dothan, AL)" }, 
- { code: "SCK", name: " Stockton Metropolitan Airport (Stockton, CA)" },
- { code: "LRD", name: " Laredo International Airport (Laredo, TX)" },
- { code: "BTM", name: " Bert Mooney Airport (Butte, MT)" },
- { code: "IPT", name: " Williamsport Regional Airport (Williamsport, PA)" },
- { code: "PIB", name: " Hattiesburg–Laurel Regional Airport (Hattiesburg/Laurel, MS)" },
- { code: "HYA", name: " Barnstable Municipal Airport (Hyannis, MA)" },
- { code: "PVU", name: " Provo Municipal Airport (Provo, UT)" },
- { code: "LBL", name: " Liberal Mid-America Regional Airport (Liberal, KS)" },
- { code: "AZO", name: " Kalamazoo/Battle Creek International Airport (Kalamazoo, MI)" },
- { code: "ACK", name: " Nantucket Memorial Airport (Nantucket, MA)" },
- { code: "YUM", name: " Yuma International Airport (Yuma, AZ)" },
- { code: "DRT", name: " Del Rio International Airport (Del Rio, TX)" },
- { code: "COD", name: " Yellowstone Regional Airport (Cody, WY)" },
- { code: "LNK", name: " Lincoln Airport (Lincoln, NE)" },
- { code: "SHD", name: " Shenandoah Valley Regional Airport (Staunton, VA)" },
- { code: "CIU", name: " Chippewa County International Airport (Sault Ste. Marie, MI)" },
- { code: "HLN", name: " Helena Regional Airport (Helena, MT)" },
- { code: "LWB", name: " Greenbrier Valley Airport (Lewisburg, WV)" },
- { code: "MEI", name: " Meridian Regional Airport (Meridian, MS)" },
- { code: "SAF", name: " Santa Fe Regional Airport (Santa Fe, NM)" },
- { code: "CYS", name: " Cheyenne Regional Airport (Cheyenne, WY)" },
- { code: "ABR", name: " Aberdeen Regional Airport (Aberdeen, SD)" },
- { code: "LCK", name: " Rickenbacker International Airport (Columbus, OH)" },
- { code: "RKS", name: " Rock Springs–Sweetwater County Airport (Rock Springs, WY)" },
- { code: "GCK", name: " Garden City Regional Airport (Garden City, KS)" },
- { code: "LWS", name: " Lewiston–Nez Perce County Airport (Lewiston, ID)" },
- { code: "EAR", name: " Kearney Regional Airport (Kearney, NE)" },
- { code: "GTR", name: " Golden Triangle Regional Airport (Columbus/Starkville/West Point, MS)" },
- { code: "CSG", name: " Columbus Metropolitan Airport (Columbus, GA)" },
- { code: "RFD", name: " Chicago Rockford International Airport (Rockford, IL)" },
- { code: "ADQ", name: " Kodiak Airport (Kodiak, AK)" },
- { code: "BLV", name: " Scott Air Force Base MidAmerica Airport (Belleville/St. Louis, IL)" },
- { code: "TYR", name: " Tyler Pounds Regional Airport (Tyler, TX)" },
- { code: "CMX", name: " Houghton County Memorial Airport (Houghton, MI)" },
- { code: "PAH", name: " Barkley Regional Airport (Paducah, KY)" },
- { code: "JST", name: " John Murtha Johnstown–Cambria County Airport (Johnstown, PA)" },
- { code: "TOL", name: " Toledo Express Airport (Toledo, OH)" },
- { code: "PSG", name: " Petersburg James A. Johnson Airport (Petersburg, AK)" },
- { code: "MHK", name: " Manhattan Regional Airport (Manhattan, KS)" },
- { code: "YKM", name: " Yakima Air Terminal (Yakima, WA)" },
- { code: "EAT", name: " Pangborn Memorial Airport (Wenatchee, WA)" },
- { code: "SPI", name: " Abraham Lincoln Capital Airport (Springfield, IL)" },
- { code: "BQK", name: " Brunswick Executive Airport (Brunswick, ME)" },
- { code: "TWF", name: " Twin Falls Airport (Twin Falls, ID)" },
- { code: "PUB", name: " Pueblo Memorial Airport (Pueblo, CO)" },
- { code: "DEC", name: " Decatur Airport (Decatur, IL)" },
- { code: "HHH", name: " Hilton Head Airport (Hilton Head, SC)" },
- { code: "PLN", name: " Pellston Regional Airport (Pellston, MI)" },
- { code: "HIB", name: " Chisholm-Hibbing Airport (Hibbing, MN)" },
- { code: "GUC", name: " Gunnison–Crested Butte Regional Airport (Gunnison, CO)" },
- { code: "ITH", name: " Ithaca Tompkins Regional Airport (Ithaca, NY)" },
- { code: "OME", name: " Nome Airport (Nome, AK)" },
- { code: "MBS", name: " MBS International Airport (Saginaw/Bay City/Midland, MI)" },
- { code: "BFM", name: " Mobile Downtown Airport (Mobile, AL)" }, 
- { code: "LYH", name: " Lynchburg Regional Airport (Lynchburg, VA)" },
- { code: "RHI", name: " Rhinelander–Oneida County Airport (Rhinelander, WI)" },
- { code: "ALW", name: " Walla Walla Regional Airport (Walla Walla, WA)" },
- { code: "DLG", name: " Dillingham Airport (Dillingham, AK)" },
- { code: "ALS", name: " San Luis Valley Regional Airport (Alamosa, CO)" },
- { code: "MMH", name: " Mammoth Yosemite Airport (Mammoth Lakes, CA)" },
- { code: "XWA", name: " Williston Basin International Airport (Williston, ND)" },
- { code: "SPN", name: " Saipan International Airport (Saipan, Northern Mariana Islands)" },
- { code: "MVY", name: " Martha’s Vineyard Airport (Edgartown, MA)" },
- { code: "ERI", name: " Erie International Tom Ridge Field (Erie, PA)" },
- { code: "PGV", name: " Pitt–Greenville Airport (Greenville, NC)" },
- { code: "HGR", name: " Hagerstown Regional Airport (Hagerstown, MD)" },
- { code: "ATY", name: " Watertown International Airport (Watertown, SD)" },
- { code: "SMX", name: " Santa Maria Public Airport (Santa Maria, CA)" },
- { code: "HVN", name: " Tweed New Haven Airport (New Haven, CT)" },
- { code: "CGI", name: " Cape Girardeau Regional Airport (Cape Girardeau, MO)" },
- { code: "BKG", name: " Branson Airport (Branson, MO)" },
- { code: "DIK", name: " Dickinson Theodore Roosevelt Regional Airport (Dickinson, ND)" },
- { code: "AKN", name: " King Salmon Airport (King Salmon, AK)" }, 
- { code: "RIW", name: " Riverton Regional Airport (Riverton, WY)" },
- { code: "FLO", name: " Florence Regional Airport (Florence, SC)" },
- { code: "GUM", name: " Antonio B. Won Pat International Airport (Guam)" },
- { code: "EAU", name: " Chippewa Valley Regional Airport (Eau Claire, WI)" },
- { code: "TBN", name: " Waynesville–St. Robert Regional Airport (Fort Leonard Wood, MO)" },
- { code: "HTS", name: " Tri-State Airport (Huntington, WV)" },
- { code: "PSM", name: " Portsmouth International Airport at Pease (Portsmouth, NH)" },
- { code: "EKO", name: " Elko Regional Airport (Elko, NV)" },
- { code: "PUW", name: " Pullman–Moscow Regional Airport (Pullman/Moscow, WA)" },
- { code: "FOD", name: " RNAS Fallon / Fallon Airfield (Fallon, NV)" },
- { code: "CDB", name: " Cold Bay Airport (Cold Bay, AK)" },
- { code: "WYS", name: " Yellowstone Airport (West Yellowstone, MT)" },
- { code: "OTH", name: " Southwest Oregon Regional Airport (North Bend/Coos Bay, OR)" },
- { code: "VCT", name: " Victoria Regional Airport (Victoria, TX)" },
- { code: "PPG", name: " Pago Pago International Airport (Pago Pago, American Samoa)" },
- { code: "OGS", name: " Ogdensburg International Airport (Ogdensburg, NY)" },
- { code: "ISN", name: " Williston Basin Code (duplicate)" },
- { code: "ART", name: " Watertown Municipal Airport (Watertown, SD)" }, 
- { code: "ILG", name: " Wilmington Airport (Wilmington, DE)" },
- { code: "OWB", name: " Owensboro–Daviess County Airport (Owensboro, KY)" },
- { code: "OGD", name: " Ogden–Hinckley Airport (Ogden, UT)" },
- { code: "STC", name: " St. Cloud Regional Airport (St. Cloud, MN)" },
- { code: "UIN", name: " Quincy Regional Airport (Quincy, IL)" },
- { code: "GST", name: " Gustavus Airport (Gustavus, AK)" },
- { code: "ADK", name: " Adak Airport (Adak, AK)" },
-];
-
-const airlineData = [
-  {name: "United Air Lines Inc.", logo: "https://logo.clearbit.com/united.com"},
-  {name: "Delta Air Lines Inc.", logo: "https://logo.clearbit.com/delta.com"},
-  {name: "Spirit Air Lines", logo: "https://logo.clearbit.com/spirit.com"},
-  {name: "Southwest Airlines Co.", logo: "https://logo.clearbit.com/southwest.com"},
-  {name: "American Airlines Inc.", logo: "https://logo.clearbit.com/aa.com"},
-  {name: "Republic Airline", logo: "https://logo.clearbit.com/rjet.com"},
-  {name: "Alaska Airlines Inc.", logo: "https://logo.clearbit.com/alaskaair.com"},
-  {name: "JetBlue Airways", logo: "https://logo.clearbit.com/jetblue.com"},
-  {name: "PSA Airlines Inc.", logo: "https://logo.clearbit.com/psaairlines.com"},
-  {name: "Allegiant Air", logo: "https://logo.clearbit.com/allegiantair.com"},
-  {name: "ExpressJet Airlines LLC d/b/a aha!", logo: "https://logo.clearbit.com/aha-air.com"},
-  {name: "SkyWest Airlines Inc.", logo: "https://logo.clearbit.com/skywest.com"},
-  {name: "Endeavor Air Inc.", logo: "https://logo.clearbit.com/endeavorair.com"},
-  {name: "Envoy Air", logo: "https://logo.clearbit.com/envoyair.com"},
-  {name: "Frontier Airlines Inc.", logo: "https://logo.clearbit.com/flyfrontier.com"},
-  {name: "Mesa Airlines Inc.", logo: "https://logo.clearbit.com/mesa-air.com"},
-  {name: "Horizon Air", logo: "https://logo.clearbit.com/horizonair.com"},
-  {name: "Hawaiian Airlines Inc.", logo: "https://logo.clearbit.com/hawaiianairlines.com"}
-];
-
-</code></pre>			
-						</div>
-					</section><!--//section-->
-			    </article><!--//docs-article-->
-			    
-			    <article class="docs-article" id="section-5">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">Developer Notes</h1>
-					    <section class="docs-intro">
-						    <p>Technical details and implementation guidance for integrating FlyCast API.</p>
-						</section><!--//docs-intro-->
-				    </header>
-				     <section class="docs-section" id="item-5-1">
-						<h2 class="section-heading">How It Works</h2>
-						<ol>
-							<li><strong>Receives</strong> flight details via POST to <code>/predict</code></li>
-							<li><strong>Preprocesses</strong> categorical info (airline, airports)</li>
-							<li><strong>Looks up</strong> airport-to-airport distance</li>
-							<li><strong>Feeds</strong> formatted input to the ML model</li>
-							<li><strong>Returns</strong> probability and binary prediction</li>
-						</ol>
-						
-						<div class="callout-block callout-block-info">
-                            <div class="content">
-                                <h4 class="callout-title">
-	                                <span class="callout-icon-holder me-1">
-		                                <i class="fas fa-robot"></i>
-		                            </span>
-	                                Machine Learning Model
-	                            </h4>
-                                <p>FlyCast uses a trained machine learning model that considers multiple factors including historical delay patterns, weather conditions, airline performance, and route characteristics to predict flight delays.</p>
-                            </div>
-                        </div>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-5-2">
-						<h2 class="section-heading">Project Structure</h2>
-						<div class="docs-code-block">
-							<pre class="shadow-lg rounded"><code class="text hljs">pred_model/
-│
-├── flight_prediction_api.py      # API source code (Flask)
-├── airport_distances.pkl         # Precomputed airport distance matrix
-├── flight_delay_model.pkl        # Serialized ML model
-├── model_columns.pkl             # Feature columns for the model
-└── requirements.txt              # Python dependencies</code></pre>
-						</div>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-5-3">
-						<h2 class="section-heading">Best Practices</h2>
-						
-						<div class="callout-block callout-block-warning">
-                            <div class="content">
-                                <h4 class="callout-title">
-	                                <span class="callout-icon-holder me-1">
-		                                <i class="fas fa-exclamation-triangle"></i>
-		                            </span>
-	                                Important Notes
-	                            </h4>
-                                <ul class="mb-0">
-                                    <li>Send only IATA codes for <code>dep</code> and <code>arr</code>: e.g., <code>"JFK"</code>, <code>"LAX"</code></li>
-                                    <li>All categorical fields are internally encoded</li>
-                                    <li><code>delay_probability</code> is a float; <code>prediction</code> uses an 0.80 threshold</li>
-                                    <li>You may omit <code>DELAY_DUE_WEATHER</code>, <code>DELAY_DUE_NAS</code>, and <code>DELAY_DUE_CARRIER</code>—they default to 0</li>
-                                    <li>Distance between airports is automatically computed; do not include it in requests</li>
-                                    <li>No authentication is currently required</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <h5>Health Check</h5>
-                        <p>You can check if the API is running by making a GET request to the root endpoint:</p>
-                        <div class="docs-code-block">
-							<pre class="shadow-lg rounded"><code class="bash hljs">curl https://flycast-api.onrender.com/</code></pre>
-						</div>
-					</section><!--//section-->
-			    </article><!--//docs-article-->
-				<article class="docs-article" id="section-6">
-				    <header class="docs-header">
-					    <h1 class="docs-heading">Support</h1>
-					    <section class="docs-intro">
-						    <p>Get help with FlyCast API implementation and report issues.</p>
-						</section><!--//docs-intro-->
-				    </header>
-				     <section class="docs-section" id="item-6-1">
-						<h2 class="section-heading">Contact</h2>
-						<p>For support, please open an issue on the <a href="https://	github.com/vishwa-aloka-16/flycast-api/issues" class="theme-link" target="_blank">GitHub repository</a>.</p>
-						<p>For general inquiries, you can reach me at <a href="mailto:vishwaaloka16@gmail.com" class="theme-link">mail me </a></p>
-						<h2 class="section-heading">License</h2>
-						<p>FlyCast API is released under the <a href="https://github.com/vishwa-aloka-16/flycast-api/blob/main/LICENSE" class="theme-link" target="_blank">MIT License</a>. You can use it freely in your projects, but please keep the attribution link in the footer.</p>
-
-					</section><!--//section-->
-					<!-- finish section -->
-			    <footer class="footer">
-				    <div class="container text-center py-5">
-				        <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-			            <small class="copyright">Made by <a class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> Updated by Vishwa Aloka For public use</small>
-				        <ul class="social-list list-unstyled pt-4 mb-0">
-						    <li class="list-inline-item"><a href="#"><i class="fa-brands fa-github fa-fw"></i></a></li> 
-				            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-x-twitter fa-fw"></i></a></li>
-				            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-slack fa-fw"></i></a></li>
-				            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-product-hunt fa-fw"></i></a></li>
-				            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-facebook-f fa-fw"></i></a></li>
-				            <li class="list-inline-item"><a href="#"><i class="fa-brands fa-instagram fa-fw"></i></a></li>
-				        </ul><!--//social-list-->
-				    </div>
-			    </footer>
-		    </div> 
-	    </div>
-    </div><!--//docs-wrapper-->
-   
-       
-    <!-- Javascript -->          
-    <!-- Plugins JS -->
-<script src="{{ url_for('static', filename='assets/plugins/popper.min.js') }}"></script>
-<script src="{{ url_for('static', filename='assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>  
-
-<!-- Page Specific JS -->
-<script src="{{ url_for('static', filename='assets/plugins/smoothscroll.min.js') }}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min.js"></script>
-<script src="{{ url_for('static', filename='assets/js/highlight-custom.js') }}"></script> 
-<script src="{{ url_for('static', filename='assets/plugins/simplelightbox/simple-lightbox.min.js') }}"></script>      
-<script src="{{ url_for('static', filename='assets/plugins/gumshoe/gumshoe.polyfills.min.js') }}"></script> 
-<script src="{{ url_for('static', filename='assets/js/docs.js') }}"></script>
-
-</body>
-</html> 
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1"
+      type="module"
+    ></script>
+  </body>
+</html>

@@ -64,6 +64,10 @@ def predict():
     except Exception as e:
         return jsonify({'error': str(e)}), 400
 
+@app.route('/docs', methods=['GET'])
+def docs():
+    return render_template('docs.html')
+
 @app.route('/', methods=['GET'])
 def home():
     return render_template('index.html')
